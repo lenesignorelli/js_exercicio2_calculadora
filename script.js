@@ -1,10 +1,17 @@
 const campo1 = document.querySelector("#campo1");
 const campo2 = document.querySelector("#campo2");
 const seletor = document.querySelector("#operacao");
-const botao = document.querySelector("#igual");
 let resposta = document.querySelector("#resposta");
 
-botao.addEventListener("click", calcular);
+/*Modifique a calculadora do exercício
+anterior removendo o botão e fazendo
+com que qualquer alteração de valor em
+qualquer um dos campos faça a resposta
+ser automaticamente calculada*/
+
+seletor.addEventListener("change", calcular);
+campo1.addEventListener("keyup", calcular);
+campo2.addEventListener("keyup", calcular);
 
 function calcular(){
 
